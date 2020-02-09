@@ -1,0 +1,27 @@
+---
+# Install ca packages
+
+- name: unwanted packages are removed
+  package:
+    name: "{{ ca_packages_remove }}"
+    state: absent
+  become: true
+  when: ca_remove_packages
+
+- name: prereq repositories are installed
+  package:
+    name: "{{ ca_packages_repos }}"
+    state: "{{ ca_packages_state }}"
+  become: true
+
+- name: prereq packages are installed
+  package:
+    name: "{{ ca_packages_prereq }}"
+    state: "{{ ca_packages_state }}"
+  become: true
+
+- name: packages are installed
+  package:
+    name: "{{ ca_packages_install }}"
+    state: "{{ ca_packages_state }}"
+  become: true

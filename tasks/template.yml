@@ -1,0 +1,10 @@
+---
+# Template configuration files for ca
+
+- name: template is copied
+  template:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+  become: true
+  loop: "{{ ca_templates_copy }}"
+  when: ca_copy_templates
