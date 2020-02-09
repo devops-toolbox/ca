@@ -8,10 +8,10 @@ ca: Ca
 Ansible galaxy:
 ---------------
 
-[https://galaxy.ansible.com/devops-toolbox.ca](https://galaxy.ansible.com/devops-toolbox.ca)
+[https://galaxy.ansible.com/devopstoolbox.ca](https://galaxy.ansible.com/devopstoolbox.ca)
 
 ```bash
-ansible-galaxy install devops-toolbox.ca
+ansible-galaxy install devopstoolbox.ca
 ```
 
 Requirements
@@ -60,7 +60,7 @@ Example Playbook
   tasks:
     - name: ca is configured
       import_role:
-        name: devops-toolbox.ca
+        name: devopstoolbox.ca
       vars:
         ca_packages_state: present
         ca_remove_packages: true
@@ -89,4 +89,4 @@ MIT
 Author Information
 ------------------
 
-- [Mihai Criveti](https://www.linkedin.com/in/devops-toolbox.)
+- [Mihai Criveti](https://www.linkedin.com/in/devopstoolbox.)
